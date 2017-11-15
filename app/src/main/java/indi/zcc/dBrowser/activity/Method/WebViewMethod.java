@@ -23,6 +23,7 @@ public class WebViewMethod
 				if (BuildConfig.DEBUG)
 				{
 					e.printStackTrace();
+					return;
 				}
 			}
 			catch (IllegalAccessException e)
