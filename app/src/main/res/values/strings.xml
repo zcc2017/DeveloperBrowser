@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MyApp</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">开发者浏览器</string>
+    <string name="hello_world">世界，你好～</string>
+	
+	<string name="login_welcomeText">这是第%d次启动程序，欢迎使用</string>
+	<string name="login_skip">跳过</string>
 
 </resources>
