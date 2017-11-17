@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="MainTheme" parent="Theme.AppCompat">
-	</style>
-	<style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@color/blue</item>
-        <item name="android:windowNoTitle">true</item>
+		<item name="android:fitsSystemWindows">true</item>
+		<item name="android:clipToPadding">true</item>
+		<item name="android:windowTranslucentStatus">true</item>
+		<item name="android:windowTranslucentNavigation">true</item>
+		<item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">false</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item> 
+	</style>
+	<style name="SplashTheme" parent="MainTheme">
+        <item name="android:windowBackground">@color/blue</item>
     </style>
-	<style name="WebTheme" parent="Theme.AppCompat.NoActionBar">
+	<style name="WebTheme" parent="MainTheme">
+		<item name="android:textSize">30px</item>
+		<item name="android:textColor">@color/yellow</item>
+		<item name="android:singleLine">true</item>
+	</style>
+	<style name="WebTheme.DetermineProgressBarStyle" >
+		<item name="android:indeterminateOnly">false</item>  
+		<item name="android:progressDrawable">@drawable/web_progressbar_load</item>  
+		<item name="android:indeterminateDrawable">@drawable/ic_web_progress_indeterminate_horizontal</item>  
+	</style>
+	<style name="WebTheme.SearchButtonStyle">
+		<item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_marginTop">3dp</item>
+		<item name="android:layout_marginLeft">1dp</item>
+		<item name="android:layout_marginRight">5dp</item>
+		<item name="android:linksClickable">false</item>
+	</style>
+	<style name="WebTheme.ToolBarButtonStyle">
+		<item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_marginTop">2.5dp</item>
+		<item name="android:layout_marginLeft">1.5dp</item>
+		<item name="android:layout_marginRight">1.5dp</item>
+		<item name="android:layout_marginBottom">0.5dp</item>
+		<item name="android:padding">10dp</item>
+        <!--<item name="android:textSize">20sp</item>-->
+        <item name="android:background">@drawable/web_toolbar_imagebutton_shape</item>
+        <!--<item name="android:textColor">@color/white</item>-->
 	</style>
 </resources>

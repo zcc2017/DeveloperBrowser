@@ -6,13 +6,106 @@
 	xmlns:custom="http://schemas.android.com/apk/res/indi/zcc/dBrowser/view"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
+	tools:context=".activity.WebActivity"
 	android:orientation="vertical"
-	android:gravity="center">
+	android:background="@color/springgreen">
 
-	<indi.zcc.dBrowser.view.DBWebView
+	<LinearLayout
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:id="@+id/web_DBWebView"/>
+		android:background="@color/transparent"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:orientation="horizontal">
+
+		<EditText
+			android:id="@+id/webEditSearch"
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent"
+			android:layout_marginRight="5dp"
+			android:layout_marginTop="2dp"
+			android:layout_weight="1"
+			android:hint="@string/web_editHint">
+
+		</EditText>
+
+		<Button
+			android:id="@+id/webButtonSearch"
+			android:text="@string/web_search"
+			style="@style/WebTheme.SearchButtonStyle"/>
+
+	</LinearLayout>
+
+	<ProgressBar
+		android:id="@+id/webProgressLoad"
+		style="@style/WebTheme.DetermineProgressBarStyle"
+		android:layout_width="match_parent"
+		android:layout_height="6dp"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:orientation="vertical">
+
+		<indi.zcc.dBrowser.view.DBWebView
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:id="@+id/webDBWebView">
+
+		</indi.zcc.dBrowser.view.DBWebView>
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/webBottomToolBarStyle"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:background="@color/transparent"
+		android:orientation="vertical">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="20dp"
+			android:id="@+id/webTextResource"
+			android:textSize="12sp"
+			android:textIsSelectable="true"
+			android:background="@color/transparent"
+			android:textColor="@color/blue"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+
+			<ImageButton
+				android:id="@+id/webButtonBack"
+				android:src="@drawable/ic_web_toolbar_back"
+				style="@style/WebTheme.ToolBarButtonStyle"/>
+
+			<ImageButton
+				android:id="@+id/webButtonForward"
+				android:src="@drawable/ic_web_toolbar_forward"
+				style="@style/WebTheme.ToolBarButtonStyle"/>
+
+			<ImageButton
+				android:id="@+id/webButtonMoreMenu"
+				android:src="@drawable/ic_web_toolbar_moremenu"
+				style="@style/WebTheme.ToolBarButtonStyle"/>
+
+			<ImageButton
+				android:id="@+id/webButtonHome"
+				android:src="@drawable/ic_web_toolbar_home"
+				style="@style/WebTheme.ToolBarButtonStyle"/>
+
+			<ImageButton
+				android:id="@+id/webButtonMutiPage"
+				android:src="@drawable/ic_web_toolbar_mutipage"
+				style="@style/WebTheme.ToolBarButtonStyle"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
 
 </LinearLayout>
 

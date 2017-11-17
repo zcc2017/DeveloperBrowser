@@ -10,7 +10,8 @@ import android.support.design.widget.*;
 
 public class SplashActivity extends BaseActivity
 {
-	private CoordinatorLayout rootLayout;
+
+	private LinearLayout rootLayout;
 	private SharedPreferences sp;
 	private static final String Count="count";
 	private boolean isActivity=true;
@@ -21,11 +22,9 @@ public class SplashActivity extends BaseActivity
 		//获取ShaerdPreferences
 		sp = getSharedPreferences(StaticString.settings_Preference, MODE_WORLD_WRITEABLE);
 		//初始化视图
-		setContentView(R.layout.splash);
-		rootLayout = (CoordinatorLayout) findViewById(R.id.splashRootLayout);
+		rootLayout = (LinearLayout) findViewById(R.id.splashRootLayout);
 		//SnackBar
-		Snackbar.make(rootLayout, getString(R.string.login_welcomeText, sp.getInt(Count, 1)), Snackbar.LENGTH_INDEFINITE)
-			.setAction(getString(R.string.login_skip), new View.OnClickListener()
+		Snackbar.make(rootLayout, getString(R.string.login_welcomeText, sp.getInt(Count, 1)), Snackbar.LENGTH_INDEFINITE).setAction(getString(R.string.login_skip), new View.OnClickListener()
 			{
 				@Override
 				public void onClick(View p1)
@@ -57,4 +56,9 @@ public class SplashActivity extends BaseActivity
 			}, 2 * 1000);
 	}
 
+	@Override
+	protected int setLayoutViewId()
+	{
+		return R.layout.splash;
+	}
 }

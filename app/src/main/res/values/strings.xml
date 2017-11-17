@@ -7,4 +7,7 @@
 	<string name="login_welcomeText">这是第%d次启动程序，欢迎使用</string>
 	<string name="login_skip">跳过</string>
 
+	<string name="web_search">搜索</string>
+	<string name="web_editHint">输入网址或关键字</string>
+	<string name="web_textResLoading">正在加载:%s</string>
 </resources>

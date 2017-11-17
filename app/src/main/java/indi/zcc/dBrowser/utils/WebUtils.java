@@ -1,12 +1,13 @@
-package indi.zcc.dBrowser.activity.Method;
+package indi.zcc.dBrowser.utils;
 
 import android.support.coreui.*;
 import android.webkit.*;
 import java.lang.reflect.*;
 
-public class WebViewMethod
+public class WebUtils
 {
-	public static void releaseAllWebViewCallback()
+	//webview退出时，释放资源
+	public static final void releaseAllWebViewCallback()
 	{
 		if (android.os.Build.VERSION.SDK_INT < 16)
 		{
@@ -23,7 +24,6 @@ public class WebViewMethod
 				if (BuildConfig.DEBUG)
 				{
 					e.printStackTrace();
-					return;
 				}
 			}
 			catch (IllegalAccessException e)
